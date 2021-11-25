@@ -76,18 +76,18 @@
 </article>
 </section> -->
 
-<section class="two-way-binding">
+<!-- <section class="two-way-binding">
   <article>
     <h3>Two-way data binding</h3>
     <div>
 
       <input type="text" [value]="nome" (input)="nome = inputName.value" #inputName>
 
-      <!-- <input type="text" bindon-ngModel="nome">
+      <input type="text" bindon-ngModel="nome">
 
       <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event">
 
-      <input type="text" [(ngModel)]="nome">  -->
+      <input type="text" [(ngModel)]="nome">
 
 
       <p>Você digitou: {{ nome }}</p>
@@ -100,7 +100,18 @@
 
       <input type="text" [value]="pessoa.nome" (input)="pessoa.nome = pessoaNome.value" #pessoaNome>
       <input type="text" [value]="pessoa.idade" (input)="pessoa.idade = pessoaIdade.value" #pessoaIdade>
-      <p>Nome: {{ pessoa.nome }}, idade: {{ pessoa.idade }}</p>
+      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade.</p>
     </div>
+  </article>
+</section> -->
+
+<section class="input-output-properties">
+  <article>
+    <h3>Input/Output properties</h3>
+
+    <app-curso [nome]="nomeDoCurso"></app-curso>
+
+    <contador [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></contador>
+
   </article>
 </section>
